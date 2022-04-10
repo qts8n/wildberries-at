@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite">
+    <test name="Catalog tests">
+        <classes>
+            <class name="main.CatalogTest" />
+        </classes>
+    </test>
+    <test name="Cart tests">
+        <parameter name="increaseValue" value="2"/>
+        <classes>
+            <class name="main.CartTest" />
+        </classes>
+    </test>
+</suite>
