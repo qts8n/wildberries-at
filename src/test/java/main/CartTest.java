@@ -1,5 +1,6 @@
 package main;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import wb.elements.CartItem;
@@ -15,6 +16,7 @@ public class CartTest extends WildberriesTest {
 
     @Test
     @Parameters("increaseValue")
+    @Description("TC-3: Increase cart item number from the cart page")
     public void increaseItemNumber(int increaseValue) throws InterruptedException {
         HomePage homePage = new HomePage(ffDriver);
         CatalogItem catalogItem = homePage.getFirstCatalogItem();

@@ -1,5 +1,6 @@
 package main;
 
+import io.qameta.allure.Description;
 import wb.elements.CatalogItem;
 import wb.pages.CatalogPage;
 import wb.pages.HomePage;
@@ -14,6 +15,7 @@ public class CatalogTest extends WildberriesTest {
     private static final String CART_BTN_AFTER_TEXT = "Перейти в корзину";
 
     @Test
+    @Description("TC-1: Item Quick View from the home page catalog section")
     public void quickViewInfo() {
         HomePage homePage = new HomePage(ffDriver);
         CatalogItem catalogItem = homePage.getFirstCatalogItem();
@@ -37,6 +39,7 @@ public class CatalogTest extends WildberriesTest {
     }
 
     @Test
+    @Description("TC-2: Add item to cart from home page catalog section")
     public void addToCart() {
         HomePage homePage = new HomePage(ffDriver);
         CatalogItem catalogItem = homePage.getFirstCatalogItem();
