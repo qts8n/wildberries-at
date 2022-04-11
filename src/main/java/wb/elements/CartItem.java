@@ -1,4 +1,4 @@
-package wb;
+package wb.elements;
 
 import io.qameta.allure.Step;
 import main.WildberriesElement;

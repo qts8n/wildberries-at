@@ -1,9 +1,10 @@
-package wb;
+package wb.pages;
 
 import main.WildberriesElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wb.elements.CartItem;
 
 public class CartPage extends WildberriesElement {
     protected By cartItemList = By.className("basket-form__content");

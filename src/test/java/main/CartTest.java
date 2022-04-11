@@ -2,7 +2,11 @@ package main;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import wb.*;
+import wb.elements.CartItem;
+import wb.elements.CatalogItem;
+import wb.pages.CartPage;
+import wb.pages.CatalogPage;
+import wb.pages.HomePage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

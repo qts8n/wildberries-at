@@ -1,10 +1,10 @@
 package main;
 
-import wb.CatalogItem;
-import wb.CatalogPage;
-import wb.HomePage;
+import wb.elements.CatalogItem;
+import wb.pages.CatalogPage;
+import wb.pages.HomePage;
 import org.testng.annotations.Test;
-import wb.QuickViewModal;
+import wb.elements.QuickViewModal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

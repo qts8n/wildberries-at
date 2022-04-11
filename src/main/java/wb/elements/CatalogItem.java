@@ -1,4 +1,4 @@
-package wb;
+package wb.elements;
 
 import io.qameta.allure.Step;
 import main.WildberriesElement;
@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import wb.pages.CatalogPage;
 
 public class CatalogItem extends WildberriesElement {
     private final WebElement item;

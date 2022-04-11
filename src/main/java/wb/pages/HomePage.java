@@ -1,8 +1,11 @@
-package wb;
+package wb.pages;
 
 import io.qameta.allure.Step;
 import main.WildberriesElement;
 import org.openqa.selenium.*;
+import wb.elements.CatalogItem;
+import wb.elements.QuickViewModal;
+
 public class HomePage extends WildberriesElement {
     protected By goodsUl = By.className("goods__list");
     protected By quickViewModal = By.cssSelector(".i-popup-same-part-kt.j-product-popup.shown");

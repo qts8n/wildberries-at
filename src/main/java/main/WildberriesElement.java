@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import wb.CartPage;
+import wb.pages.CartPage;
 
 public class WildberriesElement {
     protected static final int TIMEOUT_DEFAULT = 5;

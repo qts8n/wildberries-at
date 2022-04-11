@@ -1,4 +1,4 @@
-package wb;
+package wb.elements;
 
 import main.WildberriesElement;
 import org.openqa.selenium.By;
