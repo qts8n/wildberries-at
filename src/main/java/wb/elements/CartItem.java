@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CartItem extends WildberriesElement {
-    private static final long ITEM_TIMEOUT = 1000;
+    public static final long ITEM_TIMEOUT = 1000;
 
     protected By itemPriceDiv = By.cssSelector(".list-item__price>.list-item__price-new");
     protected By inputNumberDiv = By.className("count__input-number");
@@ -38,10 +38,15 @@ public class CartItem extends WildberriesElement {
         }
     }
 
+    public void waitOutPriceAnimations() throws InterruptedException {
+        // Skips price change animation
+        Thread.sleep(ITEM_TIMEOUT);
+    }
+
     @Step("Increase item number")
     public void increaseItemNumber() throws InterruptedException {
         WebElement inputDiv = getInputDiv();
         inputDiv.findElement(plusBtn).click();
-        Thread.sleep(ITEM_TIMEOUT);
+        waitOutPriceAnimations(); // Wait for the prices' animation to end
     }
 }

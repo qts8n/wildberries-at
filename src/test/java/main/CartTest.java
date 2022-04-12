@@ -12,8 +12,6 @@ import wb.pages.HomePage;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CartTest extends WildberriesTest {
-    private static final long INITIAL_TIMEOUT = 1000;
-
     @Test
     @Parameters("increaseValue")
     @Description("TC-3: Increase cart item number from the cart page")
@@ -24,8 +22,7 @@ public class CartTest extends WildberriesTest {
         catalogPage.addToCart();
         CartPage cartPage = homePage.openCartPage();
         CartItem cartItem = cartPage.getFirstCartItem();
-
-        Thread.sleep(INITIAL_TIMEOUT);
+        cartItem.waitOutPriceAnimations(); // Wait for the prices' animation to end
 
         int initialTotalPrice = cartPage.getPrice();
         int initialTotalNumber = cartPage.getCartItemsFromHeader();
